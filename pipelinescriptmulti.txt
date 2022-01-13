@@ -1,0 +1,31 @@
+node
+{
+    def mavenHome=tool name:"maven"
+    
+    stage('checkoutcode')
+    {
+       git branch: 'development', credentialsId: 'c4bc48e4-7a3b-4bea-8513-09c1712d62cd', url: 'https://github.com/RT-ecom-app/maven-web-application.git' 
+    }
+    
+    
+    stage('Build')
+    {
+       sh "${mavenHome}/bin/mvn clean package"
+    }
+    
+    
+     
+    stage('DeployApplicationintoTomcat')
+    {
+        
+        
+       sshagent(['a2d8aeb2-2177-4f8a-9c83-d10a7da9163a']) 
+       {
+             
+             
+             sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.178.83:/opt/apache-tomcat-8.5.73/webapps/"
+        }
+        
+    }
+    
+}
