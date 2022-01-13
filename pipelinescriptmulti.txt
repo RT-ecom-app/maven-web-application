@@ -23,7 +23,7 @@ node
        {
              
              
-             sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.178.83:/opt/apache-tomcat-8.5.73/webapps/"
+             sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.147.105:/opt/apache-tomcat-8.5.73/webapps/"
         }
         
     }
