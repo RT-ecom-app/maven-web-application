@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>fb-release</name>
-	      <url>http://35.154.27.141:8081/repository/fb-release/</url>
+	      <url>http://65.0.107.120:8081/repository/fb-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>fb-snapshot</name>
-	      <url>http://35.154.27.141:8081/repository/fb-snapshot/</url>
+	      <url>http://65.0.107.120:8081/repository/fb-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
